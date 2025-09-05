@@ -1,8 +1,6 @@
-```
+
 # 📩 Unified Spam Filter App — BERT Edition
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)  
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.36.0-orange)](https://streamlit.io/)  
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-DistilBERT-purple)](https://huggingface.co/ZeyadKhaled/Distilbert)
 
 A Streamlit web application that classifies messages as Spam or Ham using a fine-tuned DistilBERT model hosted on Hugging Face.
