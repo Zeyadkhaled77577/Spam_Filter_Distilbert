@@ -1,25 +1,18 @@
-# =============================
-# Requirements for Spam Filter App — BERT Edition
-# Compatible with Streamlit Cloud
-# =============================
-
-# Torch (CPU version)
-torch==2.8.0
-
-# Transformers
-transformers==4.42.2
-
-# Pandas (نسخة أقدم مستقرّة)
-pandas==2.1.1
-
-# Streamlit
+# Streamlit app dependencies
 streamlit==1.36.0
 
-# Safetensors
-safetensors==0.4.3
+# PyTorch
+torch==2.8.0
 
-# Numpy
-numpy==1.26.4
+# Transformers compatible with Python 3.12
+transformers==4.42.2
+tokenizers==0.19.2  # نسخة wheel جاهزة لتجنب build من المصدر
 
-# Hugging Face Hub (for model download)
-huggingface-hub>=0.17.0
+# Pandas نسخة ثابتة لا تحتاج build مع Python 3.12
+pandas==2.0.3
+
+# إضافات لتحسين اللوغ والإستثناءات
+rich==14.1.0
+markdown-it-py==4.0.0
+pygments==2.19.2
+mdurl==0.1.2
