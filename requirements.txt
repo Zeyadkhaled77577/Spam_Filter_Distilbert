@@ -1,18 +1,6 @@
-# Streamlit app dependencies
 streamlit==1.36.0
-
-# PyTorch
+rich<14  # بدل 14.1.0
 torch==2.8.0
-
-# Transformers compatible with Python 3.12
 transformers==4.42.2
-tokenizers==0.19.2  # نسخة wheel جاهزة لتجنب build من المصدر
-
-# Pandas نسخة ثابتة لا تحتاج build مع Python 3.12
-pandas==2.0.3
-
-# إضافات لتحسين اللوغ والإستثناءات
-rich==14.1.0
-markdown-it-py==4.0.0
-pygments==2.19.2
-mdurl==0.1.2
+pandas==2.1.1
+tokenizers==0.20.3  # أو آخر نسخة متوافقة مع Python 3.13
