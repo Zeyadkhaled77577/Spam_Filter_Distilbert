@@ -2,7 +2,8 @@ streamlit==1.36.0
 torch
 transformers==4.42.0
 pandas
-safetensors==0.4.3
+safetensors>=0.5.0
 numpy==1.26.4
 huggingface-hub>=0.17.0
+
 
