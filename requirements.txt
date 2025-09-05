@@ -2,7 +2,7 @@ streamlit==1.36.0
 rich<14
 torch==2.8.0
 transformers==4.42.2
-pandas==2.1.1
+pandas==2.0.3
 tokenizers==0.20.3
 markdown-it-py==4.0.0
 mdurl==0.1.2
