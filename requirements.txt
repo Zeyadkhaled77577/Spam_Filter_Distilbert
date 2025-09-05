@@ -1,7 +1,8 @@
 streamlit==1.36.0
-torch==2.3.0
+torch
 transformers==4.42.0
-pandas==2.2.2
+pandas
 safetensors==0.4.3
 numpy==1.26.4
 huggingface-hub>=0.17.0
+
