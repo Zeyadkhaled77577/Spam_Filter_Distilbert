@@ -4,3 +4,5 @@ transformers==4.42.0
 pandas==2.2.2
 safetensors==0.4.3
 numpy==1.26.4
+huggingface-hub>=0.17.0
+
