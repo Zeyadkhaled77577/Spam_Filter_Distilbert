@@ -1,5 +1,6 @@
 # Core deps
-streamlit==1.38.0
+gradio==3.41.0
+
 pandas==2.2.2
 numpy==1.26.4
 
@@ -11,3 +12,4 @@ tokenizers==0.19.1
 
 # Torch pinned to the latest that works with Hugging Face
 torch==2.4.1
+
