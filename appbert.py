@@ -6,29 +6,36 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 st.set_page_config(page_title="📩 Spam Filter App (BERT)", layout="wide")
 
 # =============================
-# Load model & tokenizer from Hugging Face
+# Hugging Face repo ID
 # =============================
 REPO_ID = "ZeyadKhaled/Distilbert"  # Your Hugging Face model repo
 
+# =============================
+# Load model & tokenizer (cached)
+# =============================
 @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained(REPO_ID)
-    model = AutoModelForSequenceClassification.from_pretrained(REPO_ID)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
-    model.eval()
-    return model, tokenizer, device
+    try:
+        with st.spinner("⏳ Downloading and loading model... please wait (first run may take 1-2 min)"):
+            tokenizer = AutoTokenizer.from_pretrained(REPO_ID)
+            model = AutoModelForSequenceClassification.from_pretrained(REPO_ID)
+            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            model.to(device)
+            model.eval()
+        return model, tokenizer, device
+    except Exception as e:
+        st.error(f"❌ Failed to load model: {e}")
+        st.stop()
 
 model, tokenizer, device = load_model()
 
 # =============================
-# Helper function
+# Prediction helper
 # =============================
 def predict_messages(messages, threshold=0.5):
     if not messages:
         return [], []
 
-    # Tokenize and move tensors to device
     inputs = tokenizer(
         messages,
         return_tensors="pt",
