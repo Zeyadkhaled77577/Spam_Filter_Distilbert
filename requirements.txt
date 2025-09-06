@@ -1,11 +1,11 @@
 streamlit==1.36.0
 
-# PyTorch (CPU build only)
+# PyTorch CPU-only
 torch==2.5.1
 
 # HuggingFace stack
 transformers==4.42.0
-tokenizers==0.19.1
+tokenizers==0.13.3
 huggingface-hub>=0.17.0
 safetensors>=0.5.0
 
