@@ -1,7 +1,13 @@
-streamlit==1.36.0
-torch
-transformers==4.38.0
-pandas
-safetensors>=0.5.0
+# Core deps
+streamlit==1.38.0
+pandas==2.2.2
 numpy==1.26.4
-huggingface-hub>=0.17.0
+
+# Hugging Face stack pinned to stable versions
+transformers==4.44.2
+huggingface-hub==0.24.6
+safetensors==0.4.5
+tokenizers==0.19.1
+
+# Torch pinned to the latest that works with Hugging Face
+torch==2.4.1
