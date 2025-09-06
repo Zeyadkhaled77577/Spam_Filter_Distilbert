@@ -1,17 +1,7 @@
 streamlit==1.36.0
-
-# Lightweight CPU-only PyTorch build (no CUDA to keep size small on Streamlit Cloud)
-torch==2.8.0+cpu
-torchvision==0.19.0+cpu
-torchaudio==2.8.0+cpu
--f https://download.pytorch.org/whl/cpu/torch_stable.html
-
-# Transformers + HuggingFace
+torch==2.8.0
 transformers==4.42.0
-huggingface-hub>=0.17.0
-safetensors>=0.5.0
-
-# Data processing
 pandas
+safetensors>=0.5.0
 numpy==1.26.4
-scikit-learn
+huggingface-hub>=0.17.0
