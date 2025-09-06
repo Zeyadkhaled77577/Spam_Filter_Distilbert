@@ -1,7 +1,15 @@
 streamlit==1.36.0
-torch==2.8.0
+
+# PyTorch (CPU build only)
+torch==2.5.1
+
+# HuggingFace stack
 transformers==4.42.0
-pandas
-safetensors>=0.5.0
-numpy==1.26.4
+tokenizers==0.19.1
 huggingface-hub>=0.17.0
+safetensors>=0.5.0
+
+# Data processing
+pandas
+numpy==1.26.4
+scikit-learn
